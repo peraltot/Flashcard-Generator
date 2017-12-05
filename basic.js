@@ -1,4 +1,4 @@
-exports.questions = [
+exports.questionsa = [
 	{
 		front: 'What year did World War begin, shortly after the assassination of Arch-Duke Ferdinand of the Austro-Hungarian empire.',
 		back: '1914'
