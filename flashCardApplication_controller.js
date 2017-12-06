@@ -5,7 +5,7 @@ var inquirer = require('inquirer');
 var flashCards = require('./flashCards.js');
 // Import the full list of questions
 var questions = require('./cloze_questions.js').questions;
-var questionsa = require('./basic.js').questionsa;
+var questionsbasic = require('./basic.js').questionsbasic;
 
 // Variable that holds questions list
 var closeQuestions = [];
@@ -26,8 +26,8 @@ function askQuestion() {
 
         // Check user response
         if (answers.userchoice.toLowerCase() === "flip") {
-            for (var i = 0; i < questionsa.length; i++) {
-                var q = new flashCards.BasicCard(questionsa[i].front, questionsa[i].back);
+            for (var i = 0; i < questionsbasic.length; i++) {
+                var q = new flashCards.BasicCard(questionsbasic[i].front, questionsbasic[i].back);
                 closeQuestions.push(q);
             }
 
