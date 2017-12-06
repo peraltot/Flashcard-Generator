@@ -7,18 +7,13 @@ var flashCards = require('./flashCards.js');
 var questions = require('./cloze_questions.js').questions;
 var questionsa = require('./basic.js').questionsa;
 
-// Variable that holds the cloze-deleted questions list
+// Variable that holds questions list
 var closeQuestions = [];
 
 // What question the user is currently on
 var currentQuestion = 0;
-// How many questions the user has gotten right
-console.log('here');
-// var questionsa = require('./basic.js').questionsa;
 
-
-
-// askQuestion prompts the user to answer a given cloze-deleted question
+// askQuestion prompts the user to which option for flash cards they want
 function askQuestion() {
     inquirer.prompt([
         {
@@ -29,7 +24,7 @@ function askQuestion() {
     ]).then(function (answers) {
         console.log('\n');
 
-        // Check if the user has guessed correctly
+        // Check user response
         if (answers.userchoice.toLowerCase() === "flip") {
             for (var i = 0; i < questionsa.length; i++) {
                 var q = new flashCards.BasicCard(questionsa[i].front, questionsa[i].back);
@@ -37,6 +32,7 @@ function askQuestion() {
             }
 
             function askQuestionbasic() {
+                // Show the front card
                 inquirer.prompt([
                     {
                         type: 'confirm',
@@ -49,7 +45,7 @@ function askQuestion() {
                     // Check if the user 
                     if (answers.userinput) {
                     }
-                    // Show the correct answer
+                    // Show the back card
                     console.log(closeQuestions[currentQuestion].back);
                     console.log('-------------------------------------\n');
 
@@ -66,7 +62,7 @@ function askQuestion() {
                         inquirer.prompt([
                             {
                                 type: 'confirm',
-                                message: 'Would you like to see again?',
+                                message: 'Would you like to flip again?',
                                 name: 'playAgain'
                             }
                         ]).then(function (answers) {
@@ -86,13 +82,13 @@ function askQuestion() {
             askQuestionbasic()
 
         } else if (answers.userchoice.toLowerCase() === "guess") {
-            // var questions = require('./cloze_questions.js').questions;
+            
             for (var i = 0; i < questions.length; i++) {
                 var q = new flashCards.ClozeCard(questions[i].full, questions[i].cloze);
                 closeQuestions.push(q);
             }
 
-            // askQuestion prompts the user to answer a given cloze-deleted question
+            // askQuestionguess prompts user with cloze-deleted questions
             function askQuestionguess() {
                 inquirer.prompt([
                     {
@@ -103,7 +99,7 @@ function askQuestion() {
                 ]).then(function (answers) {
                     console.log('\n');
 
-                    // Check if the user 
+                    // Check if the user confirm
                     if (answers.userinput) {
                     }
                     // Show the correct answer
@@ -123,7 +119,7 @@ function askQuestion() {
                         inquirer.prompt([
                             {
                                 type: 'confirm',
-                                message: 'Would you like to see again?',
+                                message: 'Would you like to guess again?',
                                 name: 'playAgain'
                             }
                         ]).then(function (answers) {
@@ -132,7 +128,7 @@ function askQuestion() {
                                 askQuestionguess();
                             } else {
                                 // Exit the game
-                                console.log('Thanks for playing! Goodbye!');
+                                console.log('Thanks for Guessing! Goodbye!');
                             }
                         })
                     }
@@ -140,7 +136,6 @@ function askQuestion() {
             }
             askQuestionguess();
         }
-
         // Begin asking the questions!
     })
 }
