@@ -1,22 +1,22 @@
 exports.questions = [
 	{
-		full: 'World War I began in 1914, shortly after the assassination of Arch-Duke Ferdinand of the Austro-Hungarian empire.',
-		cloze: '1914'
+		full: 'Jyn Erso is played by Felicity Jones in the 2016 Walt Disney film "Star Wars Rogue One?',
+		cloze: 'Jyn Erso'
 	},
 	{
-		full: 'Adolf Hitler was born in the city of Lintz in Austria, near the German border.',
-		cloze: 'Austria'
+		full: '"Rick Deckard" is a character associated with "Blade Runner" that was directed by Ridley Scott?',
+		cloze: 'Blade Runner'
 	},
 	{
-		full: 'JFK was assassinated while driving through Dallas in November 1963.',
-		cloze: 'Dallas'
+		full: 'Jeff Goldblum played the role of "The Fly" (1986)?',
+		cloze: 'Jeff Goldblum'
 	},
 	{
-		full: 'Andrew Jackson was the commanding general of the Battle of New Orleans in 1815.',
-		cloze: 'Jackson'
+		full: '"Bruce Willis" and "Brad Pitt" star in "12 Monkeys" the 1995 Terry Gillam science fictiorn film?',
+		cloze: '12 Monkeys'
 	},
 	{
-		full: 'Douglas MacArthur famously stated "I shall return" after leaving Bataan in 1942 fleeing from the conquering Japanese. He in fact did return.',
-		cloze: 'MacArthur'
+		full: 'Richard Dawson played the role of the game show host Damon Killian in Stephen Kings film "The Running Man"?',
+		cloze: 'Richard Dawson'
 	}
 ]
