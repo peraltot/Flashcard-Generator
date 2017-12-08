@@ -44,11 +44,11 @@ function askQuestion() {
 
                     // Check if the user 
                     if (answers.userinput) {
-                    }
+                    
                     // Show the back card
                     console.log(closeQuestions[currentQuestion].back);
                     console.log('-------------------------------------\n');
-
+                    }
                     // Advance to the next question
                     if (currentQuestion < closeQuestions.length - 1) {
                         currentQuestion++;
@@ -102,11 +102,11 @@ function askQuestion() {
 
                     // Check if the user confirm
                     if (answers.userinput) {
-                    }
+                    
                     // Show the correct answer
                     console.log(closeQuestions[currentQuestion].cloze);
                     console.log('-------------------------------------\n');
-
+                    }
                     // Advance to the next question
                     if (currentQuestion < closeQuestions.length - 1) {
                         currentQuestion++;
