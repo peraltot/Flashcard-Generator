@@ -68,6 +68,7 @@ function askQuestion() {
                         ]).then(function (answers) {
                             if (answers.playAgain) {
                                 // Begin asking the questions!
+                                currentQuestion = 0;
                                 askQuestionbasic();
                             } else {
                                 // Exit the game
@@ -125,6 +126,7 @@ function askQuestion() {
                         ]).then(function (answers) {
                             if (answers.playAgain) {
                                 // Begin asking the questions!
+                                currentQuestion = 0;
                                 askQuestionguess();
                             } else {
                                 // Exit the game
